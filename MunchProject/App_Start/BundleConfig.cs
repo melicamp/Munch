@@ -39,6 +39,9 @@ namespace MunchProject
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
+            bundles.Add(new ScriptBundle("~/bundles/signalr")
+                .Include("~/Scripts/jquery.signalR-{version}.js"));
+                
             bundles.Add(new ScriptBundle("~/bundles/ko")
                 .Include("~/Scripts/knockout-{version}.js",
                          "~/Scripts/knockout-{version}.debug.js"));

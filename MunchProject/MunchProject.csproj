@@ -140,12 +140,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MunchController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ResponseResolver.cs" />
+    <Compile Include="Models\MunchModel.cs" />
+    <Compile Include="Models\PantsModel.cs" />
+    <Compile Include="Models\SuitModel.cs" />
+    <Compile Include="Models\Weapon.cs" />
     <Compile Include="MunchHub.cs" />
+    <Compile Include="MunchQueries\GameModel.cs" />
+    <Compile Include="MunchQueries\MunchQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IMunchServiceContract.cs" />
+    <Compile Include="Services\MunchService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -255,7 +265,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
