@@ -6,9 +6,8 @@ using System.Text;
 
 namespace MunchProject.MunchQueries
 {
-    public class GameModel
+    public class GameModel : ModelBase
     {
-        public int Id { get; set; }
         public IQueryable<MunchModel> Munches { get; set; }
     }
 }

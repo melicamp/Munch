@@ -12,8 +12,12 @@ namespace MunchProject.Controllers
 {
     public class MunchController : ApiController
     {
-        //TODO: Add dependency resolver
-        IMunchServiceContract munchService = new MunchService();
+        private readonly IMunchServiceContract _munchService;
+
+        public MunchController(IMunchServiceContract munchService)
+        {
+            _munchService = munchService;
+        }
 
         // GET api/munch
         public IEnumerable<string> Get()
@@ -24,12 +28,13 @@ namespace MunchProject.Controllers
         // GET api/munch/5
         public HttpResponseMessage Get(int id)
         {
-            return munchService.GetMunchById(id).GetResponseMessage(Request);
+            return _munchService.GetMunchById(id).GetResponseMessage(Request);
         }
 
         // POST api/munch
-        public void Post([FromBody]string value)
+        public HttpResponseMessage Post([FromBody]MunchModel munch)
         {
+            return _munchService.AddMunch(munch).PostResponseMessage(munch, Request);
         }
 
         // PUT api/munch/5

@@ -20,5 +20,12 @@ namespace MunchProject.Services
         {
             return munches.Where(p => p.Id == id).FirstOrDefault();
         }
+
+
+        public IEnumerable<MunchModel> AddMunch(MunchModel munch)
+        {
+            munches.Add(munch);
+            return munches;
+        }
     }
 }

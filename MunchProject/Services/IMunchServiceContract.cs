@@ -9,5 +9,6 @@ namespace MunchProject.Services
     public interface IMunchServiceContract
     {
         MunchModel GetMunchById(int id);
+        IEnumerable<MunchModel> AddMunch(MunchModel munch);
     }
 }

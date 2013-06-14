@@ -1,14 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace MunchProject.Models
 {
-    public class MunchModel
+    public class MunchModel : ModelBase
     {
-        public int Id { get; set; }
+        [JsonProperty("player_name")]
         public string PlayerName { get; set; }
+        [JsonProperty("life_count")]
         public int LifeCount { get; set; }
         public WeaponModel RightHand { get; set; }
         public WeaponModel LeftHand { get; set; }
