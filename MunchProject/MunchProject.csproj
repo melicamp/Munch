@@ -161,11 +161,17 @@
     <Compile Include="Infrastructure\NinjectResolver.cs" />
     <Compile Include="Infrastructure\NinjectScope.cs" />
     <Compile Include="Infrastructure\ResponseResolver.cs" />
+    <Compile Include="Migrations\201306150937055_Initial.cs" />
+    <Compile Include="Migrations\201306150937055_Initial.Designer.cs">
+      <DependentUpon>201306150937055_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Models\MunchModel.cs" />
     <Compile Include="Models\PantsModel.cs" />
     <Compile Include="Models\SuitModel.cs" />
-    <Compile Include="Models\Weapon.cs" />
+    <Compile Include="Models\WeaponModel.cs" />
+    <Compile Include="Contexts\MunchContext.cs" />
     <Compile Include="MunchHub.cs" />
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="MunchQueries\MunchQueries.cs" />
@@ -284,6 +290,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201306150937055_Initial.resx">
+      <DependentUpon>201306150937055_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
