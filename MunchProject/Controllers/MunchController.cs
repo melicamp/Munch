@@ -28,7 +28,7 @@ namespace MunchProject.Controllers
         // GET api/munch/5
         public HttpResponseMessage Get(int id)
         {
-            return _munchService.GetMunchById(id).GetResponseMessage(Request);
+            return _munchService.GetMunchById(id).GetResponseMessage(Request, "Munch not found!");
         }
 
         // POST api/munch

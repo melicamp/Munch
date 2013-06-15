@@ -16,5 +16,7 @@ namespace MunchProject.Contexts
 
         public DbSet<MunchModel> Munches { get; set; }
         public DbSet<WeaponModel> Weapons { get; set; }
+        public DbSet<SuitModel> Suits { get; set; }
+        public DbSet<PantsModel> PantsList { get; set; }
     }
 }

@@ -97,7 +97,7 @@
   <ItemGroup>
     <Compile Include="Controllers\MunchControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />

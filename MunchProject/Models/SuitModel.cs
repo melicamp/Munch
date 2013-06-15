@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MunchProject.Models
 {
-    public class SuitModel
+    public class SuitModel : ModelBase
     {
     }
 }

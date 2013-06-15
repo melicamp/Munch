@@ -154,7 +154,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MunchController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -164,6 +163,10 @@
     <Compile Include="Migrations\201306150937055_Initial.cs" />
     <Compile Include="Migrations\201306150937055_Initial.Designer.cs">
       <DependentUpon>201306150937055_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306151040356_AdditionalModels.cs" />
+    <Compile Include="Migrations\201306151040356_AdditionalModels.Designer.cs">
+      <DependentUpon>201306151040356_AdditionalModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ModelBase.cs" />
@@ -176,8 +179,9 @@
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="MunchQueries\MunchQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IMunchServiceContract.cs" />
+    <Compile Include="Services\Contracts\IMunchServiceContract.cs" />
     <Compile Include="Services\MunchService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -294,6 +298,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201306150937055_Initial.resx">
       <DependentUpon>201306150937055_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306151040356_AdditionalModels.resx">
+      <DependentUpon>201306151040356_AdditionalModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

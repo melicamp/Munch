@@ -1,31 +1,24 @@
 ﻿using MunchProject.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
 namespace MunchProject.Services
 {
-    public class MunchService : IMunchServiceContract
+    public class MunchService : ServiceBase, IMunchServiceContract
     {
-        List<MunchModel> munches = new List<MunchModel>
-        {
-            new MunchModel{
-                Id = 1,
-                PlayerName = "Łukaszek"
-            }
-        };
-
         public MunchModel GetMunchById(int id)
         {
-            return munches.Where(p => p.Id == id).FirstOrDefault();
+            return _db.Munches.Where(p => p.Id == id).FirstOrDefault();
         }
-
 
         public IEnumerable<MunchModel> AddMunch(MunchModel munch)
         {
-            munches.Add(munch);
-            return munches;
+            _db.Munches.Add(munch);
+            _db.SaveChanges();
+            return _db.Munches;
         }
     }
 }
