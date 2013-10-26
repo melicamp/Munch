@@ -1,27 +1,23 @@
-/// <reference path="..\..\Typings\Jquery\jquery.d.ts" />
-/// <reference path="..\..\Typings\knockout\knockout.d.ts" />
-/// <reference path="..\munch.ts" />
+/// <reference path="../../Typings/knockout/knockout.d.ts" />
+import mu = require("munch");
 
-module MunchProject {
+export class MunchViewModel {
 
-    export class MunchViewModel {
+    static munchUrl = "api/munch/";
 
-        static munchUrl = "api/munch/";
+    constructor(public munchlist: KnockoutObservableArray<mu.Munch>) {
 
-        constructor(public munchlist: KnockoutObservableArray<Munch>) {
+    }
 
-        }
+    getMunchById(id: number): void {
+        $.get(MunchViewModel.munchUrl + id, item => {
+            var munch = <mu.Munch>item;
+            this.munchlist.push(new mu.Munch(munch.playerName, munch.lifeCount));
+        }, "json");
+    }
 
-        getMunchById(id: number): void {
-            $.get(MunchViewModel.munchUrl + id, item => {
-                var munch = <Munch>item;
-                this.munchlist.push(new Munch(munch.playerName, munch.lifeCount));
-            }, "json");
-        }
+    postMunch(munch: mu.Munch): boolean {
 
-        postMunch(munch: Munch): boolean {
-
-            return false;
-        }
+        return false;
     }
 }

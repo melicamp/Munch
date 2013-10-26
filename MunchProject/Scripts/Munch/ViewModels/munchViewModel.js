@@ -1,5 +1,7 @@
-var MunchProject;
-(function (MunchProject) {
+define(["require", "exports", "munch"], function(require, exports, __mu__) {
+    /// <reference path="../../Typings/knockout/knockout.d.ts" />
+    var mu = __mu__;
+
     var MunchViewModel = (function () {
         function MunchViewModel(munchlist) {
             this.munchlist = munchlist;
@@ -8,7 +10,7 @@ var MunchProject;
             var _this = this;
             $.get(MunchViewModel.munchUrl + id, function (item) {
                 var munch = item;
-                _this.munchlist.push(new MunchProject.Munch(munch.playerName, munch.lifeCount));
+                _this.munchlist.push(new mu.Munch(munch.playerName, munch.lifeCount));
             }, "json");
         };
 
@@ -18,5 +20,5 @@ var MunchProject;
         MunchViewModel.munchUrl = "api/munch/";
         return MunchViewModel;
     })();
-    MunchProject.MunchViewModel = MunchViewModel;
-})(MunchProject || (MunchProject = {}));
+    exports.MunchViewModel = MunchViewModel;
+});

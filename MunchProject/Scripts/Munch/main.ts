@@ -1,19 +1,14 @@
-/// <reference path="..\Typings\Jquery\jquery.d.ts" />
-/// <reference path="..\Typings\knockout\knockout.d.ts" />
-/// <reference path="munch.ts" />
-/// <reference path="ViewModels\munchViewModel.ts" />
-/// <reference path="hub.ts" />
+import mvm = require("ViewModels/munchViewModel");
+import mu = require("munch");
 
-module MunchProject {
 
-    export class Program {
+export class Program {
 
-        main() {
-            //var munch = new Munch("Cocia", 1);
-            var munchViewModel = new MunchViewModel(ko.observableArray());
-            var munch = munchViewModel.getMunchById(1);
+    main() {
+        //var munch = new mu.Munch("Cocia", 1);
+        var munchViewModel = new mvm.MunchViewModel(ko.observableArray());
+        var munch1 = munchViewModel.getMunchById(1);
 
-            var munchHub = $.connection.munchHub;
-        }
+        var munchHub = $.connection.munchHub;
     }
 }

@@ -1,5 +1,5 @@
-var MunchProject;
-(function (MunchProject) {
+/// <reference path="../Typings/knockout/knockout.d.ts" />
+define(["require", "exports"], function(require, exports) {
     var Munch = (function () {
         function Munch(playerName, lifeCount) {
             this.playerName = playerName;
@@ -10,5 +10,5 @@ var MunchProject;
         }
         return Munch;
     })();
-    MunchProject.Munch = Munch;
-})(MunchProject || (MunchProject = {}));
+    exports.Munch = Munch;
+});
