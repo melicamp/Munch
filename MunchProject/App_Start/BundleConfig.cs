@@ -50,6 +50,9 @@ namespace MunchProject
                 .Include("~/Scripts/Munch/munch.js",
                          "~/Scripts/Munch/main.js",
                          "~/Scripts/Munch/ViewModels/munchViewModel.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/require")
+                .Include("~/Scripts/require.js"));
         }
     }
 }

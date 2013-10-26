@@ -245,6 +245,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Jquery\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\Munch\program.js">
+      <DependentUpon>program.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\Jquery\jquery-1.7.1.js" />
     <Content Include="Scripts\Jquery\jquery-1.7.1.min.js" />
     <None Include="Scripts\Jquery\jquery.validate-vsdoc.js" />
@@ -283,6 +286,7 @@
       <DependentUpon>munch.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="Scripts\Munch\ViewModels\munchViewModel.ts" />
+    <TypeScriptCompile Include="Scripts\Munch\program.ts" />
     <Content Include="Scripts\Munch\ViewModels\munchViewModel.js">
       <DependentUpon>munchViewModel.ts</DependentUpon>
     </Content>
@@ -294,6 +298,7 @@
     <Content Include="Scripts\Typings\jquery\jquery.d.ts" />
     <Content Include="Scripts\Typings\knockout\knockout.amd.d.ts" />
     <Content Include="Scripts\Typings\knockout\knockout.d.ts" />
+    <Content Include="Scripts\Typings\requirejs\require.d.ts" />
     <Content Include="Scripts\Typings\signalr\signalr.d.ts" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

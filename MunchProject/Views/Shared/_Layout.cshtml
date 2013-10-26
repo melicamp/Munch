@@ -13,7 +13,9 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/signalr")
     @Scripts.Render("~/bundles/ko")
-    @Scripts.Render("~/bundles/munch")
+    <script 
+        src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/bundles/require")"
+        data-main="@Url.Content("~/Scripts/Munch/main.js")"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
