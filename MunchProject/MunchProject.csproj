@@ -245,6 +245,13 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Jquery\jquery-1.7.1.intellisense.js" />
+    <TypeScriptCompile Include="Scripts\Munch\Infrastructure\httpClient.ts" />
+    <Content Include="Scripts\Munch\Infrastructure\httpClient.js">
+      <DependentUpon>httpClient.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Munch\ViewModels\baseViewModel.js">
+      <DependentUpon>baseViewModel.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\Munch\program.js">
       <DependentUpon>program.ts</DependentUpon>
     </Content>
@@ -287,6 +294,7 @@
     </Content>
     <TypeScriptCompile Include="Scripts\Munch\ViewModels\munchViewModel.ts" />
     <TypeScriptCompile Include="Scripts\Munch\program.ts" />
+    <TypeScriptCompile Include="Scripts\Munch\ViewModels\baseViewModel.ts" />
     <Content Include="Scripts\Munch\ViewModels\munchViewModel.js">
       <DependentUpon>munchViewModel.ts</DependentUpon>
     </Content>

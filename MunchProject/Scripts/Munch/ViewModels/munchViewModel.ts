@@ -1,23 +1,25 @@
 /// <reference path="../../Typings/knockout/knockout.d.ts" />
 import mu = require("munch");
+import bvm = require("ViewModels/baseViewModel")
 
-export class MunchViewModel {
+export class MunchViewModel extends bvm.BaseViewModel {
 
     static munchUrl = "api/munch/";
 
     constructor(public munchlist: KnockoutObservableArray<mu.Munch>) {
-
+        super();
     }
 
     getMunchById(id: number): void {
-        $.get(MunchViewModel.munchUrl + id, item => {
+        this.httpClient.get(MunchViewModel.munchUrl + id, item => {
             var munch = <mu.Munch>item;
             this.munchlist.push(new mu.Munch(munch.playerName, munch.lifeCount));
-        }, "json");
+        });
     }
 
-    postMunch(munch: mu.Munch): boolean {
-
-        return false;
+    postMunch(munch: mu.Munch): void {
+        this.httpClient.post(MunchViewModel.munchUrl, munch, success => {
+            alert("Posted!");
+        });
     }
 }

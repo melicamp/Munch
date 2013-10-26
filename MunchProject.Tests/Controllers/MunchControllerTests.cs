@@ -41,7 +41,7 @@ namespace MunchProject.Tests.Controllers
         {
             var munch = new MunchModel
             {
-                PlayerName = "Łukaszek",
+                PlayerName = "Kocham Alunię, bo jest śliczna! :*:*",
                 LifeCount = 1
             };
 
